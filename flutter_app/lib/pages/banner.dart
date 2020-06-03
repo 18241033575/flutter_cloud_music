@@ -6,12 +6,15 @@ class BannerList extends StatelessWidget {
   Widget build(BuildContext context) {
     return (
       Container(
-        padding: EdgeInsets.all(15.0),
+        padding: EdgeInsets.all(12.0),
         height: 160,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(const Radius.circular(8.0))
+        ),
         child: Swiper(
           itemBuilder: (BuildContext context, int index) {
-            return Image.asset(
-              "images/type_channelgs.png",
+            return Image.network(
+              "http://via.placeholder.com/288x188",
               fit: BoxFit.fill,
             );
           },
